@@ -1,7 +1,7 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-# DAXX BAN ALL BOT
+# KANEKI BAN ALL BOT
 
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=DAXXTEAM&repo=DAXXBANALL&theme=flag-india)
@@ -20,7 +20,7 @@
 - 𝗸𝗶𝗰𝗸𝗮𝗹𝗹
 - 𝗹𝗲𝗮𝘃𝗲
 - 𝗿𝗲𝘀𝘁𝗮𝗿𝘁
-
+- kaneki
 
 <p><img width="494" align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=DAXXTEAM&show_icons=true&locale=en&layout=compact" alt="DAXXTEAM" /></p>
 
