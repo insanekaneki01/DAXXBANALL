@@ -44,14 +44,14 @@ logging.basicConfig(level=logging.INFO)
 
 print("Starting.....")
 
-Daxx = TelegramClient('Daxx', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
+KANEKI = TelegramINSANEnt('insane', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
 
 
 SUDO_USERS = []
 for x in Var.SUDO: 
     SUDO_USERS.append(x)
 
-@Daxx.on(events.NewMessage(pattern="^/ping"))  
+@@OgKaneki.on(events.NewMessage(pattern="^/ping"))  
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
@@ -62,7 +62,7 @@ async def ping(e):
         await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
 
 
-@Daxx.on(events.NewMessage(pattern="^/kickall"))
+@OgKaneki.on(events.NewMessage(pattern="^/kickall"))
 async def kickall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
@@ -70,7 +70,7 @@ async def kickall(event):
          await event.reply(Reply)
      else:
          await event.delete()
-         Daxx = await event.get_chat()
+         kaneki = await event.get_chat()
          Nexioop = await event.client.get_me()
          admin = Daxx.admin_rights
          creator = Daxx.creator
@@ -91,10 +91,10 @@ async def kickall(event):
              except Exception as e:
                     print(str(e))
                     await asyncio.sleep(0.1)
-         await Nexio.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
+         await Nexio.edit(f"**Users FUCKED Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
     
 
-@Daxx.on(events.NewMessage(pattern="^/banall"))
+@OgKaneki.on(events.NewMessage(pattern="^/banall"))
 async def banall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
@@ -104,11 +104,11 @@ async def banall(event):
          await event.delete()
          Daxx = await event.get_chat()
          Nexioop = await event.client.get_me()
-         admin = Daxx.admin_rights
+         admin = kaneki.admin_rights
          creator = Daxx.creator
          if not admin and not creator:
               return await event.reply("I Don't have sufficient Rights !!")
-         Nexio = await Daxx.send_message(event.chat_id, "**𝐇𝐈 𝐁𝐀𝐁𝐘 !! 𝐈.𝐦 𝐀𝐥𝐢𝐯𝐞😏**")
+         Nexio = await kaneki.send_message(event.chat_id, "**𝐇𝐈 𝐁𝐀𝐁𝐘 !! 𝐈.𝐦 𝐀𝐥𝐢𝐯𝐞😎**")
          admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
          admins_id = [i.id for i in admins]
          all = 0
@@ -126,7 +126,7 @@ async def banall(event):
          await Nexio.edit(f"**Users Banned Successfully ! \n\n Banned Users:** `{bann}` \n **Total Users:** `{all}`")
 
     
-@Daxx.on(events.NewMessage(pattern="^/unbanall"))
+@OgKaneki.on(events.NewMessage(pattern="^/unbanall"))
 async def unban(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
@@ -149,7 +149,7 @@ async def unban(event):
          await msg.edit("{}: {} unbanned".format(event.chat_id, p))
 
 
-@Daxx.on(events.NewMessage(pattern="^/leave"))
+@OgKaneki.on(events.NewMessage(pattern="^/leave"))
 async def _(e):
     if e.sender_id in SUDO_USERS:
         Nexio = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -174,13 +174,13 @@ async def _(e):
                 await event.edit(str(e))   
           
 
-@Daxx.on(events.NewMessage(pattern="^/restart"))
+@OgKaneki.on(events.NewMessage(pattern="^/restart"))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
         text = "__Restarting__ !!!"
         await e.reply(text, parse_mode=None, link_preview=None )
         try:
-            await Daxx.disconnect()
+            await insane.disconnect()
         except Exception:
             pass
         os.execl(sys.executable, sys.executable, *sys.argv)
@@ -188,6 +188,6 @@ async def restart(e):
 
 
 print("\n\n")
-print("𝐃𝐀𝐗𝐗 𝐓𝐄𝐀𝐌 𝐁𝐀𝐍 𝐀𝐋𝐋 𝐁𝐎𝐓 𝐃𝐎𝐍𝐄 ")
+print("𝐈𝐍𝐒𝐀𝐍𝐄 𝐁𝐀𝐍 𝐀𝐋𝐋 𝐁𝐎𝐓 𝐃𝐎𝐍𝐄 ")
 
-Daxx.run_until_disconnected()
+insane.run_until_disconnected()
